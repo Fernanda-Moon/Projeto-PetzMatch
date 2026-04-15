@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Pet | PetzMatch</title>
+    <link rel="icon" type="image/png" href="img/petzmatch.logo.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="mobile-header">
+            <div class="header-content">
+                <a href="perfil.html" class="back-button">
+                    <span class="material-icons">arrow_back</span>
+                </a>
+                <h1 class="logo">Cadastrar Pet</h1>
+                <span></span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <form id="cadastroPetForm" class="cadastro-form">
+                <!-- Dados do Dono -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="material-icons">person</span>
+                        <h3>Dados do Tutor(a)</h3>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Nome completo</label>
+                        <input type="text" id="donoNome" placeholder="Ex: João da Silva" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Data de nascimento</label>
+                            <input type="date" id="donoNasc" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Localização</label>
+                            <input type="text" id="donoLocal" placeholder="Cidade, UF" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Foto do Tutor(a)</label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="donoFotoInput" accept="image/*" class="file-input">
+                            <label for="donoFotoInput" class="file-label">
+                                <span class="material-icons">cloud_upload</span>
+                                Escolher arquivo
+                            </label>
+                            <span class="file-name" id="donoFileName">Nenhum arquivo escolhido</span>
+                        </div>
+                        <img id="previewDono" class="preview-image" style="display:none;">
+                    </div>
+                </div>
+
+                <!-- Dados do Pet -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="material-icons">pets</span>
+                        <h3>Dados do Pet</h3>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Nome do Pet</label>
+                        <input type="text" id="petNome" placeholder="Ex: Luna" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Tipo de Animal</label>
+                            <select id="petTipo" required>
+                                <option value="">Selecione</option>
+                                <option value="gato">Felino</option>
+                                <option value="cachorro">Cão</option>
+                                <option value="passaro">Pássaro</option>
+                                <option value="roedor">Roedor</option>
+                                <option value="peixe">Peixe</option>
+                                <option value="reptil">Réptil</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Sexo</label>
+                            <select id="petSexo" required>
+                                <option value="">Selecione</option>
+                                <option value="Macho">Macho</option>
+                                <option value="Fêmea">Fêmea</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Raça</label>
+                            <input type="text" id="petRaca" placeholder="Ex: Siamês" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Peso (kg)</label>
+                            <input type="number" step="0.1" id="petPeso" placeholder="Ex: 3.2" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Data de nascimento</label>
+                        <input type="date" id="petNasc" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Fotos do Pet</label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="petFotosInput" accept="image/*" multiple class="file-input">
+                            <label for="petFotosInput" class="file-label">
+                                <span class="material-icons">add_photo_alternate</span>
+                                Escolher arquivos
+                            </label>
+                            <span class="file-name" id="petFileName">Nenhum arquivo escolhido</span>
+                        </div>
+                        <div id="previewPet" class="preview-container"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Descrição</label>
+                        <textarea id="petDesc" rows="4" placeholder="Conte um pouco sobre o pet..." required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-large">
+                    <span class="material-icons">check_circle</span>
+                    Cadastrar Pet
+                </button>
+            </form>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

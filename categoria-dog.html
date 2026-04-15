@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cães | PetzMatch</title>
+    <link rel="icon" type="image/png" href="img/petzmatch.logo.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="mobile-header">
+            <div class="header-content">
+                <a href="home.html" class="back-button">
+                    <span class="material-icons">arrow_back</span>
+                </a>
+                <h1 class="logo">Cães</h1>
+                <span></span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="filter-chips">
+                <span class="chip active" data-filter="todos">Todos</span>
+                <span class="chip" data-filter="macho">Macho</span>
+                <span class="chip" data-filter="femea">Fêmea</span>
+            </div>
+
+            <div class="row g-3" id="categoriaPetsContainer">
+                <!-- Está no JS -->
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="home.html" class="nav-item"><span class="material-icons">home</span><span>Início</span></a>
+            <a href="explorar.html" class="nav-item active"><span class="material-icons">favorite</span><span>Explorar</span></a>
+            <a href="chat.html" class="nav-item"><span class="material-icons">chat_bubble</span><span>Chat</span></a>
+            <a href="perfil.html" class="nav-item"><span class="material-icons">person</span><span>Perfil</span></a>
+        </nav>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof carregarPetsCategoria === 'function') {
+                carregarPetsCategoria('cachorro');
+            }
+        });
+    </script>
+</body>
+</html>

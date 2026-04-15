@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar | PetzMatch</title>
+    <link rel="icon" type="image/png" href="img/petzmatch.logo.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="mobile-header">
+            <div class="header-content">
+                <h1 class="logo">Explorar Pets</h1>
+                <span class="material-icons">tune</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Filtros -->
+            <div class="filter-section">
+                <select id="filtroTipo" class="filter-select">
+                    <option value="todos">Todos os tipos</option>
+                    <option value="gato">Felinos</option>
+                    <option value="cachorro">Cães</option>
+                    <option value="passaro">Pássaros</option>
+                    <option value="roedor">Roedores</option>
+                    <option value="peixe">Peixes</option>
+                    <option value="reptil">Répteis</option>
+                </select>
+                <select id="filtroSexo" class="filter-select">
+                    <option value="todos">Todos os sexos</option>
+                    <option value="Macho">Macho</option>
+                    <option value="Fêmea">Fêmea</option>
+                </select>
+            </div>
+
+            <div class="row g-3" id="explorarPetsContainer">
+                <!-- Está no JS -->
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="home.html" class="nav-item"><span class="material-icons">home</span><span>Início</span></a>
+            <a href="explorar.html" class="nav-item active"><span class="material-icons">favorite</span><span>Explorar</span></a>
+            <a href="chat.html" class="nav-item"><span class="material-icons">chat_bubble</span><span>Chat</span></a>
+            <a href="perfil.html" class="nav-item"><span class="material-icons">person</span><span>Perfil</span></a>
+        </nav>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof carregarExplorar === 'function') {
+                carregarExplorar();
+            }
+        });
+    </script>
+</body>
+</html>

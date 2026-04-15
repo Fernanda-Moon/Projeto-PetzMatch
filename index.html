@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetzMatch | Boas-vindas</title>
+    <link rel="icon" type="image/png" href="img/petzmatch.logo.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="welcome-page">
+    <div class="welcome-container">
+        <div class="welcome-content">
+            <h1 class="welcome-title">Bem-vindo ao PetzMatch!</h1>
+             <div class="logo-welcome-page">
+                <img src="img/petzmatch.logo.jpeg" alt="Logo da PetzMatch">
+             </div>
+            <p class="welcome-subtitle">Encontre o par perfeito para seu pet</p>
+            <div class="welcome-buttons">
+                <button class="btn btn-primary btn-large" id="btnEntrar">Entrar</button>
+                <button class="btn btn-outline btn-large" id="btnCadastrar">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Login -->
+    <dialog id="loginModal">
+        <div class="modal-content">
+            <h2>Entrar</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" id="loginEmail" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" id="loginSenha" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+            </form>
+            <button class="btn-close-modal" id="closeLoginModal">Cancelar</button>
+        </div>
+    </dialog>
+
+    <!-- Modal de Cadastro -->
+    <dialog id="cadastroModal">
+        <div class="modal-content">
+            <h2>Cadastrar</h2>
+            <form id="cadastroForm">
+                <div class="form-group">
+                    <label>Nome completo</label>
+                    <input type="text" id="cadNome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" id="cadEmail" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" id="cadSenha" placeholder="Mínimo 6 caracteres" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirmar senha</label>
+                    <input type="password" id="cadConfirmSenha" placeholder="Repita a senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+            </form>
+            <button class="btn-close-modal" id="closeCadastroModal">Cancelar</button>
+        </div>
+    </dialog>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

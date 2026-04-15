@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil | PetzMatch</title>
+    <link rel="icon" type="image/png" href="img/petzmatch.logo.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="mobile-header">
+            <div class="header-content">
+                <h1 class="logo">Perfil</h1>
+                <span class="material-icons">settings</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="profile-header">
+                <div class="profile-avatar-large">
+                    <img src="img/avatar.png.jpg" alt="Dono">
+                </div>
+                <h2 id="perfilNome">Fernanda Travassos</h2>
+                <p id="perfilTelefone">(83) 99609-8944</p>
+            </div>
+
+            <div class="profile-menu">
+                <a href="#" class="menu-item">
+                    <span class="material-icons">person</span>
+                    <span>Editar Perfil</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="material-icons">lock</span>
+                    <span>Privacidade</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="material-icons">help</span>
+                    <span>Ajuda</span>
+                </a>
+                <a href="#" class="menu-item" onclick="logout()">
+                    <span class="material-icons">logout</span>
+                    <span>Sair</span>
+                </a>
+            </div>
+
+            <section class="meus-pets-section">
+                <div class="section-header">
+                    <h3>Meus Pets</h3>
+                    <a href="cadastro-pet.html" class="add-pet-btn">
+                        <span class="material-icons">add_circle</span>
+                        Cadastrar Pet
+                    </a>
+                </div>
+                <div class="row g-3" id="meusPetsContainer">
+                    <!-- Está no JS -->
+                </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="home.html" class="nav-item"><span class="material-icons">home</span><span>Início</span></a>
+            <a href="explorar.html" class="nav-item"><span class="material-icons">favorite</span><span>Explorar</span></a>
+            <a href="chat.html" class="nav-item"><span class="material-icons">chat_bubble</span><span>Chat</span></a>
+            <a href="perfil.html" class="nav-item active"><span class="material-icons">person</span><span>Perfil</span></a>
+        </nav>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof carregarPerfil === 'function') {
+                carregarPerfil();
+            }
+        });
+    </script>
+</body>
+</html>
